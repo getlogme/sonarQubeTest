@@ -1,0 +1,9 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes,force:lightningQuickAction,force:appHostable"
+                access="global">
+	
+    <h2>Hello Lightning App test!Some change</h2>
+    <h2>Hello Lightning App test!</h2>
+    <h3>Hello again</h3>
+    <h3>Test of lightning bundle</h3>
+    <ui:button label="Click" class="slds-button slds-button--neutral" labelClass="label" press="{!c.Clicked}"/>
+</aura:component>

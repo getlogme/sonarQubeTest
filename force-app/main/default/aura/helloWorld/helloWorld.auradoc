@@ -1,0 +1,8 @@
+<aura:documentation>
+	<aura:description>Lightning Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		        Add a new line
+        Deleted a line above and this is a new line
+        Another new line
+	</aura:example>
+</aura:documentation>
