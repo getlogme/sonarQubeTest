@@ -30,4 +30,15 @@ export default class Detail extends LightningElement {
     changeHandler(event) {
         this.greeting = event.target.value;
     }
+
+    getReadableStatus(job) {
+        return job.isRunning() ? "Running" : job.hasErrors() ? "Failed" : "Succeeded ";  // Noncompliant
+    }
+
+    getReadableStatus1(job) {
+        if (job.isRunning()) {
+          return "Running";
+        }
+        return job.hasErrors() ? "Failed" : "Succeeded";
+      }
 }
