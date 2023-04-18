@@ -41,4 +41,15 @@ export default class Detail extends LightningElement {
         }
         return job.hasErrors() ? "Failed" : "Succeeded";
       }
+
+      fun(a) {
+        var i = 10;
+        return i + a;
+        i++;             // Noncompliant; this is never executed
+      }
+
+      fun1(int a) {
+        var i = 10;
+        return i + a;
+      }
 }
