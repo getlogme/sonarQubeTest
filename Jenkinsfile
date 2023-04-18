@@ -12,7 +12,7 @@ node {
     def PACKAGE_VERSION
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
 
-    def toolbelt = tool 'toolbelt'
+    //def toolbelt = tool 'toolbelt'
 
 
     // -------------------------------------------------------------------------
@@ -22,6 +22,13 @@ node {
     stage('checkout source') {
         checkout scm
     }
+
+    stage('SonarQube Analysis') {
+        def scannerHome = tool 'SonarScanner';
+        withSonarQubeEnv() {
+        sh "${scannerHome}/bin/sonar-scanner"
+        }
+  }
 
 }
 
